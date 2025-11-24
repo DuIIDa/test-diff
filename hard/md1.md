@@ -1,4 +1,6 @@
-# Feature engineering guidelines
+# Feature guild
+
+Make sure that you understand
 
 ## Overview
 
@@ -7,8 +9,6 @@ The following is a list of guidelines and principles every engineer must follow 
 ## Read the requirements
 
 1. Make sure that you understand every sentence and every word in both functional and non-functional requirements defined for the task.
-
-   An indicator of understanding is the ability to explain why every statement was added to the document and how will you make sure that the feature complies with the statement.
 
 2. Communicate and address every questions and potential misunderstanding you have before starting the coding.
 
@@ -20,7 +20,7 @@ The following is a list of guidelines and principles every engineer must follow 
 
    It is your job as an engineer to convert natural language definition (text) into a formal one (code).
 
-4. Capture all your questions, workarounds and decision in the task tracker.
+4. Capture all your all questions, workarounds and decision in the task tracker.
 
    Do not capture your conversations, only issues and their solutions or other decisions on the implementation approach.
 
@@ -28,27 +28,29 @@ The following is a list of guidelines and principles every engineer must follow 
 
 6. Suggest simpler implementation or changes in requirements to simplify the implementation if it does not contradict client’s goals.
 
+7. does not contradict client’s goals.
+
+   Do not capture your conversations, only issues and their solutions or other decisions on the implementation approach.
+
 ## Implement the feature
 
 1. The code shall cover both positive and negative scenarios
 
 2. The code shall work properly with edge cases of the potential input
 
-3. The code shall properly handle errors in input data and 3rd party system call responses.
+3. In case of errors the system shall either continue to work and write error information into logs or shutdown and provide a clear response to user with the explanation of the source of error.
 
-4. In case of errors the system shall either continue to work and write error information into logs or shutdown and provide a clear response to user with the explanation of the source of error.
+4. The code shall log the necessary information for potential troubleshooting in a non-local environment.
 
-5. The code shall log the necessary information for potential troubleshooting in a non-local environment.
+5. Reproduce the issue and understand the root cause before fixing it.
 
-6. Reproduce the issue and understand the root cause before fixing it.
+6. Look for ways to automate your work and avoid creating repetitive boilerplate code.
 
-7. Look for ways to automate your work and avoid creating repetitive boilerplate code.
+7. Push the code at least daily etc
 
-8. Push the code at least daily
+8. Create good UI when it is not defined explicitly using best practices and UI frameworks.
 
-9. Create good UI when it is not defined explicitly using best practices and UI frameworks.
-
-10. Update the technical documentation of the system
+9. Update the technical documentation of the system
 
 ## Communicate
 
@@ -64,24 +66,22 @@ The following is a list of guidelines and principles every engineer must follow 
 
 6. Communicate any configuration or other dependencies necessary for production release of the feature (infrastructure configuration updates, adding new parameters to the build, running one-time migrations or other scripts, etc.) and capture that information in the ticket.
 
-## Test the feature
-
-1. It is your responsibility to test your code and provide production ready implementation.
+7. It is your responsibility to test your code and provide production ready implementation.
 
    QA is not for cleaning up the mess after the engineers.
 
-2. Make sure the code builds without any errors and warnings (including coding guidelines style checks).
+8. Make sure the code builds without any errors and warnings (including coding guidelines style checks).
 
-3. Do not push the code that you did not run.
+9. Do not push the code that you did not run.
 
-4. Test all positive and negative scenarios.
+10. Test all positive and negative scenarios.
 
-5. Test edge cases and error handling.
+11. Test edge cases and error handling.
 
-6. Verify non-functional and architectural requirements.
+12. Verify non-functional and architectural requirements.
 
-7. Verify integration with other components and dependencies.
+13. Verify integration with other components and dependencies.
 
-8. Verify that your changes do not break the build in CI server.
+14. Verify that your changes do not break the build in CI server.
 
-9. Test the feature in a non-local environment after the push.
+15. Test the feature in a non-local environment after the push.
